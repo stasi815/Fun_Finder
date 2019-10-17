@@ -2,8 +2,13 @@
 
 {% block content %}
     <h1>Events</h1>
+    <a href='/events/new'>New Event</a>
     {% for event in events %}
         <h2>{{ event.title }}</h2>
-        <small>{{ event.description }}</small>
+        <small>Description: {{ event.description }}</small><br>
+        <small>Age Range: {{ event.age_range }}</small><br>
+        <small>Location: {{ event.location }}</small><br>
+        <small>Date: {{ event.date }}</small><br>
+        <small>Category: {{ event.category }}</small>
     {% endfor %}
 {% endblock %}
