@@ -3,17 +3,21 @@
 {% block content %}
     <a href='/'>Back to Home</a><br>
     <a href='/events'>Back to Events</a>
-    <h1>{{ event.title }}</h1>
+    <h1 class='text-info'>{{ event.title }}</h1>
+    <h2 class='text-warning'>Description: {{ event.description }}</h2>
+    <h2 class='text-success'>Age Range: {{ event.age_range }}</h2>
+    <h2 class='text-info'>Location: {{ event.location }}</h2>
+    <h2 class='text-warning'>Date: {{ event.date }}</h2>
+    <h2 class='text-success'>Category: {{ event.category }}</h2>
     {% if event.created_at %}
-    <p class='text-muted'>Created on: {{ event.created_at.strftime('%A, %d %B, %Y') }} at {{ event.created_at.strftime('%I:%M %p') }}</p>
+        <p class='text-muted'>Created on: {{ event.created_at.strftime('%A, %d %B, %Y') }} at {{ event.created_at.strftime('%I:%M %p') }}</p>
     {% endif %}
-    <h2>Description: {{ event.description }}</h2>
-    <h2>Age Range: {{ event.age_range }}</h2>
-    <h2>Location: {{ event.location }}</h2>
-    <h2>Date: {{ event.date }}</h2>
-    <h2>Category: {{ event.category }}</h2>
-    <p><a href="/events/{{ event._id }}/edit">Edit</a></p>
+    <form method='GET' action="/events/{{ event._id }}/edit">
+        <div class='form-group'>
+            <button class="btn btn-outline-primary" type='submit'>Edit</button>
+        </div>
+    </form>
     <p><form method='POST' action="/events/{{ event._id }}/delete">
-        <button type='submit'>Delete</button>
+        <button class="btn btn-outline-danger" type='submit'>Delete</button>
     </form></p>
 {% endblock %}

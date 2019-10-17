@@ -2,26 +2,26 @@
     <legend>{{ title }}</legend>
     <p class="text-success">
         <label for='event-title'>Title</label><br>
-        <input id='event-title' type='text' name='title' value='{{ event.title }}'/>
+        <input class='text-info' id='event-title' type='text' name='title' value='{{ event.title }}'/>
     </p>
     <p class="text-success">
         <label for='event-description'>Description</label><br>
-        <input id='event-description' type='text' name='description' value='{{ event.description }}'/>
+        <input class='text-info' id='event-description' type='text' name='description' value='{{ event.description }}'/>
     </p>
     <p class="text-success">
         <label for='event-age_range'>Age Range</label><br>
-        <input id='event-age_range' type='text' name='age_range' value='{{ event.age_range }}'/>
+        <input class='text-info' id='event-age_range' type='text' name='age_range' value='{{ event.age_range }}'/>
     </p>
     <p class="text-success">
         <label for='event-location'>Location</label><br>
-        <input id='event-location' type='text' name='location' value='{{ event.location }}'/>
+        <input class='text-info' id='event-location' type='text' name='location' value='{{ event.location }}'/>
     </p>
     <p class="text-success">
         <label for='event-date'>Date of Event</label><br>
-        <input id='event-date' type='text' name='date' value='{{ event.date }}'/>
+        <input class='text-info' id='event-date' type='text' name='date' value='{{ event.date }}'/>
     </p>
-    <p class="text-info">
-        <label for='event-category'>Event Category</label><br>
+    <p>
+        <label class="text-info" for='event-category'>Event Category</label><br>
         <select name='category' id='event-category'>
             <option value="educational">Educational</option>
             <option value="outdoor">Outdoor</option>
