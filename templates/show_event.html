@@ -9,4 +9,8 @@
     <h2>Location: {{ event.location }}</h2>
     <h2>Date: {{ event.date }}</h2>
     <h2>Category: {{ event.category }}</h2>
+    <p><a href="/events/{{ event._id }}/edit">Edit</a></p>
+    <p><form method='POST' action="/events/{{ event._id }}/delete">
+        <button type='submit'>Delete</button>
+    </form></p>
 {% endblock %}

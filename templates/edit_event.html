@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form method='POST' action='/events'>
+<form method='POST' action='/events/{{event._id}}'>
     {% include 'partials/events_form.html' %}
 </form>
 
@@ -10,5 +10,4 @@
         <button  class='btn btn-primary' type='submit'>Cancel</button>
     </div>
 </form>
-
 {% endblock %}
