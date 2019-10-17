@@ -11,7 +11,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     """Return homepage."""
-    return render_template('home.html', msg='Flask is cool!')
+    return render_template('home.html', msg='Welcome to Fun Finder!')
 
 #  events = [
 #     { 'title': 'Storytime', 'description': 'Free storytime' },
