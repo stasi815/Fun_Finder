@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
+from bson.objectid import ObjectId
 
 client = MongoClient()
 db = client.Fun_Finder
@@ -44,5 +45,13 @@ def event_submit():
         'date': request.form.get('date'),
         'category': request.form.get('category')
     }
-    events.insert_one(event)
-    return redirect(url_for('events_index'))
+    event_id = events.insert_one(event).inserted_id
+    return redirect(url_for('show_event',event_id=event_id))
+
+@app.route('/events/<event_id>')
+def show_event(event_id):
+    """Show a single event."""
+    event = events.find_one({'_id': ObjectId(event_id)})
+    return render_template('show_event.html', event=event)
+
+# @app.route('/events/')
