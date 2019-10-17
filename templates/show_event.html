@@ -4,6 +4,9 @@
     <a href='/'>Back to Home</a><br>
     <a href='/events'>Back to Events</a>
     <h1>{{ event.title }}</h1>
+    {% if event.created_at %}
+    <p class='text-muted'>Created on: {{ event.created_at.strftime('%A, %d %B, %Y') }} at {{ event.created_at.strftime('%I:%M %p') }}</p>
+    {% endif %}
     <h2>Description: {{ event.description }}</h2>
     <h2>Age Range: {{ event.age_range }}</h2>
     <h2>Location: {{ event.location }}</h2>

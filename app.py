@@ -39,7 +39,8 @@ def event_submit():
         'age_range': request.form.get('age_range'),
         'location': request.form.get('location'),
         'date': request.form.get('date'),
-        'category': request.form.get('category')
+        'category': request.form.get('category'),
+        'created_at': datetime.now()
     }
     event_id = events.insert_one(event).inserted_id
     return redirect(url_for('show_event',event_id=event_id))

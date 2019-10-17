@@ -1,26 +1,26 @@
 <fieldset>
     <legend>{{ title }}</legend>
-    <p>
+    <p class="text-success">
         <label for='event-title'>Title</label><br>
         <input id='event-title' type='text' name='title' value='{{ event.title }}'/>
     </p>
-    <p>
+    <p class="text-success">
         <label for='event-description'>Description</label><br>
         <input id='event-description' type='text' name='description' value='{{ event.description }}'/>
     </p>
-    <p>
+    <p class="text-success">
         <label for='event-age_range'>Age Range</label><br>
         <input id='event-age_range' type='text' name='age_range' value='{{ event.age_range }}'/>
     </p>
-    <p>
+    <p class="text-success">
         <label for='event-location'>Location</label><br>
         <input id='event-location' type='text' name='location' value='{{ event.location }}'/>
     </p>
-    <p>
+    <p class="text-success">
         <label for='event-date'>Date of Event</label><br>
         <input id='event-date' type='text' name='date' value='{{ event.date }}'/>
     </p>
-    <p>
+    <p class="text-info">
         <label for='event-category'>Event Category</label><br>
         <select name='category' id='event-category'>
             <option value="educational">Educational</option>
@@ -32,5 +32,5 @@
     </p>
 </fieldset>
 <p>
-    <button type='submit'>Save Event</button>
+    <button type='submit' class="btn btn-info">Save Event</button>
 </p>
