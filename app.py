@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
 from bson.objectid import ObjectId
+import os
 
-client = MongoClient()
-db = client.Fun_Finder
+host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/Fun_Finder')
+client = MongoClient(host=f'{host}?retryWrites=false')
+db = client.get_default_database()
 events = db.events
 
 app = Flask(__name__)
@@ -75,3 +77,6 @@ def delete_event(event_id):
     """Delete an event"""
     events.delete_one({'_id': ObjectId(event_id)})
     return redirect(url_for('events_index'))
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5000))
