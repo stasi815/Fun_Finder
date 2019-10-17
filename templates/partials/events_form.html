@@ -1,28 +1,28 @@
 <fieldset>
-    <legend>{{ title }}</legend>
-    <p class="text-success">
+    <legend class="text-warning">{{ title }}</legend>
+    <div class="form-group text-success">
         <label for='event-title'>Title</label><br>
-        <input class='text-info' id='event-title' type='text' name='title' value='{{ event.title }}'/>
-    </p>
-    <p class="text-success">
+        <input class='form-control text-info' id='event-title' type='text' name='title' value='{{ event.title }}'/>
+    </div>
+    <div class="form-group text-success">
         <label for='event-description'>Description</label><br>
-        <input class='text-info' id='event-description' type='text' name='description' value='{{ event.description }}'/>
-    </p>
-    <p class="text-success">
+        <input class='form-control text-info' id='event-description' type='text' name='description' value='{{ event.description }}'/>
+    </div>
+    <div class="form-group text-success">
         <label for='event-age_range'>Age Range</label><br>
-        <input class='text-info' id='event-age_range' type='text' name='age_range' value='{{ event.age_range }}'/>
-    </p>
-    <p class="text-success">
+        <input class='form-control text-info' id='event-age_range' type='text' name='age_range' value='{{ event.age_range }}'/>
+    </div>
+    <div class="form-group text-success">
         <label for='event-location'>Location</label><br>
-        <input class='text-info' id='event-location' type='text' name='location' value='{{ event.location }}'/>
-    </p>
-    <p class="text-success">
+        <input class='form-control text-info' id='event-location' type='text' name='location' value='{{ event.location }}'/>
+    </div>
+    <div class="form-group text-success">
         <label for='event-date'>Date of Event</label><br>
-        <input class='text-info' id='event-date' type='text' name='date' value='{{ event.date }}'/>
-    </p>
-    <p>
+        <input class='form-control text-info' id='event-date' type='text' name='date' value='{{ event.date }}'/>
+    </div>
+    <div class="form-group">
         <label class="text-info" for='event-category'>Event Category</label><br>
-        <select name='category' id='event-category'>
+        <select name='category' id='event-category' class='form-control'>
             <option value="educational">Educational</option>
             <option value="outdoor">Outdoor</option>
             <option value="sports">Sports</option>
@@ -30,7 +30,7 @@
             <option value="religious">Religious</option>
             <option value="music">Music</option>
         </select>
-    </p>
+    </div>
 </fieldset>
 <p>
     <button type='submit' class="btn btn-info">Save Event</button>

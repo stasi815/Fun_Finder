@@ -1,13 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form method='POST' action='/events/{{event._id}}'>
-    {% include 'partials/events_form.html' %}
-</form>
+<div class='row'>
+    <div class='col-sm-6 col-sm-offset-3'>
+        <form method='POST' action='/events/{{event._id}}'>
+            {% include 'partials/events_form.html' %}
+        </form>
 
-<form action='/'>
-    <div class='form-group'>
-        <button class="btn btn-info" type='submit'>Cancel</button>
+        <form action='/'>
+            <div class='form-group'>
+                <button class="btn btn-info" type='submit'>Cancel</button>
+            </div>
+        </form>
     </div>
-</form>
+</div>
 {% endblock %}
