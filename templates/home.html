@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="jumbotron">
+    <center><div class="jumbotron">
         <h1 class="display-3 text-warning">Welcome to Fun Finder!</h1>
+        <div class='justify-content-center'>
+            <center><img src="static/balloons.jpg" width="75%"></center>
+        </div><br>
         <p class="lead text-success">Create, update and delete fun, free kid's events/activities in Marin County, California.</p>
         <hr class="my-4">
         <p class="text-info">From storytimes to movies in the park, if it's free and for children, we want to know about it!</p>
         <p class="lead">
             <a class="btn btn-success btn-lg" href='/events' role="button">Events</a>
         </p>
-    </div>
+    </div></center>
 {% endblock %}
