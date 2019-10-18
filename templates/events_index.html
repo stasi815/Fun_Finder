@@ -2,14 +2,14 @@
 
 {% block content %}
 <div class="container">
-    <div class='row'>
-        <div class= "col-sm-6 col-sm-offset-3">
+    <div class='row align-items-center justify-content-center'>
+        <div class= "col-sm-9">
             <h1 class="text-warning">Events</h1>
             <a href='/'>Back to Home</a><br>
             <a href='/events/new'>New Event</a>
-            <div class='row'>
+            <div class='row justify-content-center'>
                 {% for event in events %}
-                    <div class='col-lg-12'>
+                    <div class='col-sm'>
                         <div class="card border-info mb-3" style="max-width: 20rem;">
                             <div class="card-header">
                                 <h2><a  class="text-info" href='/events/{{ event._id }}'>{{ event.title }}</a></h2>
